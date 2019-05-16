@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Sorting Hat</string>
+    <string name="description">emblem</string>
+    <string name="title">The Sorting Hat</string>
+    <string name="btn_start">Start</string>
+    <string name="homescreen">homescreen</string>
+    <string name="oval">oval</string>
+
+    <string name="question1">Which of these would you use to describe you?</string>
+    <string name="s1a1">Brave</string>
+    <string name="s1a2">Loyal</string>
+    <string name="s1a3">Creative</string>
+    <string name="s1a4">Cunning</string>
+
+    <string name="gryffindor">GRYFFINDOR</string>
+    <string name="ravenclaw">RAVENCLAW</string>
+    <string name="hufflepuff">HUFFLEPUFF</string>
+    <string name="slytherin">SLYTHERIN</string>
+</resources>
