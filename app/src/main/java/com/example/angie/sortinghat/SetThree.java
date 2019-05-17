@@ -1,6 +1,9 @@
 package com.example.angie.sortinghat;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -8,6 +11,7 @@ import android.widget.Button;
 import android.widget.RadioButton;
 
 public class SetThree extends AppCompatActivity {
+    private int num3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,55 +23,51 @@ public class SetThree extends AppCompatActivity {
         final RadioButton charms = findViewById(R.id.rdBtnCharms);
         final RadioButton defense = findViewById(R.id.rdBtnDef);
 
+        if(potions.isChecked())
+        {
+            num3 = 20;
+            Intent nextScreen = new Intent(SetThree.this, SetFour.class);
+
+            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+            SharedPreferences.Editor editor = prefs.edit();
+            editor.putInt("num3", 20); //InputString: from the EditText
+            editor.commit();
+        }
+        if(trans.isChecked())
+        {
+            num3 = 10;
+            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+            SharedPreferences.Editor editor = prefs.edit();
+            editor.putInt("num3", 10); //InputString: from the EditText
+            editor.commit();
+        }
+        if(charms.isChecked())
+        {
+            num3 = 15;
+            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+            SharedPreferences.Editor editor = prefs.edit();
+            editor.putInt("num3", 10); //InputString: from the EditText
+            editor.commit();
+        }
+        if(defense.isChecked())
+        {
+            num3 = 5;
+            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+            SharedPreferences.Editor editor = prefs.edit();
+            editor.putInt("num3", 5); //InputString: from the EditText
+            editor.commit();;
+        }
+
+
         final Button next = findViewById(R.id.btnNext2);
 
         next.setOnClickListener(new View.OnClickListener()
         {
-            private int num3 = 0;
-            private int num2 = 0;
-            private int num1 = 0;
             @Override
             public void onClick(View v)
             {
                 Intent nextScreen = new Intent(SetThree.this, SetFour.class);
                 startActivity(nextScreen);
-
-                Bundle extras = getIntent().getExtras();
-                if(extras != null)
-                {
-                    num1 = extras.getInt("num1");
-                    num2 = extras.getInt("num2");
-                }
-
-
-                if(potions.isChecked())
-                {
-                    num3 = 20;
-                    nextScreen.putExtra("num2", num2);
-                    nextScreen.putExtra("num1",num1);
-                    nextScreen.putExtra("num3",num3);
-                }
-                if(trans.isChecked())
-                {
-                    num3 = 10;
-                    nextScreen.putExtra("num2", num2);
-                    nextScreen.putExtra("num1",num1);
-                    nextScreen.putExtra("num3",num3);
-                }
-                if(charms.isChecked())
-                {
-                    num3 = 15;
-                    nextScreen.putExtra("num2", num2);
-                    nextScreen.putExtra("num1",num1);
-                    nextScreen.putExtra("num3",num3);
-                }
-                if(defense.isChecked())
-                {
-                    num3 = 5;
-                    nextScreen.putExtra("num2", num2);
-                    nextScreen.putExtra("num1",num1);
-                    nextScreen.putExtra("num3",num3);
-                }
             }
         });
     }

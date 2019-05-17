@@ -29,4 +29,5 @@
     <string name="witchard">Are you a witch or a wizard?</string>
     <string name="witch">Witch</string>
     <string name="wizard">Wizard</string>
+    <string name="youre">You are a</string>
 </resources>

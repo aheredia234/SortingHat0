@@ -1,6 +1,9 @@
 package com.example.angie.sortinghat;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -9,8 +12,7 @@ import android.widget.ImageButton;
 
 public class SetTwo extends AppCompatActivity {
 
-    private int num1 =0;
-    private int num2 = 0;
+    private int num2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,12 +23,7 @@ public class SetTwo extends AppCompatActivity {
         final ImageButton h2 = findViewById(R.id.imgH);
         final ImageButton s2 = findViewById(R.id.imgS);
 
-        Bundle extras = getIntent().getExtras();
 
-        if(extras != null)
-        {
-            num1 = extras.getInt("num1");
-        }
         g2.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -34,8 +31,11 @@ public class SetTwo extends AppCompatActivity {
             {
                 num2 = 5;
                 Intent nextScreen = new Intent(SetTwo.this, SetThree.class);
-                nextScreen.putExtra("num2", num2);
-                nextScreen.putExtra("num1",num1);
+                Activity myActivity=(Activity)(v.getContext());
+                SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(myActivity);
+                SharedPreferences.Editor editor = prefs.edit();
+                editor.putInt("num2", 5); //InputString: from the EditText
+                editor.commit();
                 startActivity(nextScreen);
             }
         });
@@ -45,10 +45,13 @@ public class SetTwo extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
-                num2 = 10;
+                num2= 10;
                 Intent nextScreen = new Intent(SetTwo.this, SetThree.class);
-                nextScreen.putExtra("num2", num2);
-                nextScreen.putExtra("num1",num1);
+                Activity myActivity=(Activity)(v.getContext());
+                SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(myActivity);
+                SharedPreferences.Editor editor = prefs.edit();
+                editor.putInt("num2", 10); //InputString: from the EditText
+                editor.commit();
                 startActivity(nextScreen);
             }
         });
@@ -60,8 +63,11 @@ public class SetTwo extends AppCompatActivity {
             {
                 num2 = 15;
                 Intent nextScreen = new Intent(SetTwo.this, SetThree.class);
-                nextScreen.putExtra("num2", num2);
-                nextScreen.putExtra("num1",num1);
+                Activity myActivity=(Activity)(v.getContext());
+                SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(myActivity);
+                SharedPreferences.Editor editor = prefs.edit();
+                editor.putInt("num2", 15); //InputString: from the EditText
+                editor.commit();
                 startActivity(nextScreen);
             }
         });
@@ -71,10 +77,13 @@ public class SetTwo extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
-                num2 = 20;
+                num2= 20;
                 Intent nextScreen = new Intent(SetTwo.this, SetThree.class);
-                nextScreen.putExtra("num2", num2);
-                nextScreen.putExtra("num1",num1);
+                Activity myActivity=(Activity)(v.getContext());
+                SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(myActivity);
+                SharedPreferences.Editor editor = prefs.edit();
+                editor.putInt("num2", 20); //InputString: from the EditText
+                editor.commit();
                 startActivity(nextScreen);
             }
         });
