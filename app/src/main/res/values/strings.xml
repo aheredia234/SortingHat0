@@ -16,4 +16,17 @@
     <string name="ravenclaw">RAVENCLAW</string>
     <string name="hufflepuff">HUFFLEPUFF</string>
     <string name="slytherin">SLYTHERIN</string>
+    <string name="pet">Which pet would you prefer?</string>
+    <string name="name">What is your name?</string>
+
+    <string name="Q3">Which class would you like to take the most?</string>
+    <string name="trans">Transfiguration</string>
+    <string name="potions">Potions</string>
+    <string name="defense">Defense Against the Dark Arts</string>
+    <string name="charms">Charms</string>
+    <string name="btnNext">Next</string>
+
+    <string name="witchard">Are you a witch or a wizard?</string>
+    <string name="witch">Witch</string>
+    <string name="wizard">Wizard</string>
 </resources>

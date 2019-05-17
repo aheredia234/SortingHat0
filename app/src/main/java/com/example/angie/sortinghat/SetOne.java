@@ -23,8 +23,8 @@ public class SetOne extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
-                Intent nextScreen = new Intent(SetOne.this, Result.class);
-                nextScreen.putExtra("i", 5);
+                Intent nextScreen = new Intent(SetOne.this, SetTwo.class);
+                nextScreen.putExtra("num1", 5);
                 startActivity(nextScreen);
             }
         });
@@ -34,8 +34,8 @@ public class SetOne extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
-                Intent nextScreen = new Intent(SetOne.this, Result.class);
-                nextScreen.putExtra("i", 10);
+                Intent nextScreen = new Intent(SetOne.this, SetTwo.class);
+                nextScreen.putExtra("num1", 10);
                 startActivity(nextScreen);
             }
         });
@@ -45,8 +45,8 @@ public class SetOne extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
-                Intent nextScreen = new Intent(SetOne.this, Result.class);
-                nextScreen.putExtra("i", 15);
+                Intent nextScreen = new Intent(SetOne.this, SetTwo.class);
+                nextScreen.putExtra("num1", 15);
                 startActivity(nextScreen);
             }
         });
@@ -56,8 +56,8 @@ public class SetOne extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
-                Intent nextScreen = new Intent(SetOne.this, Result.class);
-                nextScreen.putExtra("i", 20);
+                Intent nextScreen = new Intent(SetOne.this, SetTwo.class);
+                nextScreen.putExtra("num1", 20);
                 startActivity(nextScreen);
             }
         });

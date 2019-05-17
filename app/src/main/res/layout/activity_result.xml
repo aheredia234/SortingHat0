@@ -83,6 +83,7 @@
         android:fontFamily="@font/bilbo_swash_caps"
         android:gravity="center"
         android:textAlignment="center"
+        android:textColor="@android:color/white"
         android:textSize="98sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

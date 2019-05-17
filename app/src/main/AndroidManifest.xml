@@ -22,7 +22,10 @@
             android:resource="@array/preloaded_fonts" />
 
         <activity android:name=".SetOne" />
-        <activity android:name=".Result"></activity>
+        <activity android:name=".Result" />
+        <activity android:name=".SetTwo" />
+        <activity android:name=".SetThree" />
+        <activity android:name=".SetFour"></activity>
     </application>
 
 </manifest>

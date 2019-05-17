@@ -23,8 +23,9 @@ public class Result extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
         if(extras != null)
         {
-            num = extras.getInt("i");
+            num = extras.getInt("j");
         }
+        num = num/2;
         if(num < 6)
         {
             result.setText("Gryffindor");
